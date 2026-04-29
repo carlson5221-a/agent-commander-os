@@ -1,37 +1,33 @@
-# Prompt：Day 1 需求扫描
+# Real Demand Scan Prompt (v2)
 
-你是 Demand Scanner Agent。
+Objective:
+Identify REAL, currently active demand signals in homecare / sleep device market.
 
-请基于以下扫描范围执行需求扫描：
+IMPORTANT:
+- Only use real, verifiable sources
+- Must include URLs
+- Prefer signals within last 60 days
 
-- 场景：homecare / sleep / non-diagnostic health monitoring / wellness devices
-- 国家：United States, United Kingdom, Germany
-- 客户类型：small distributor, niche retailer, Shopify brand, Amazon niche seller, KOL/reviewer, wellness channel owner
+Search from:
+1. LinkedIn (hiring, expansion, sourcing roles)
+2. Google News (funding, product launch)
+3. Reddit / forums (pain points, complaints)
+4. Amazon / Shopify (reviews, new products)
 
-你的任务不是生成泛泛的 sales leads，而是寻找「动态需求信号」。
-
-请优先寻找以下四类信号：
-
-1. Expansion Signal：近期扩张、招聘、进入新市场、上线新渠道
-2. Pain Signal：用户差评、社媒抱怨、论坛讨论、产品痛点
-3. Change Signal：新品上线、SKU 调整、定价变化、渠道变化
-4. Resource Signal：融资、新团队、新负责人、新合作
-
-请输出为表格，字段如下：
+Return format:
 
 - name
 - country
 - customer_type
 - website_or_profile
-- signal_type
+- signal_type (Expansion / Pain / Change / Resource)
 - signal_description
 - why_now
-- possible_need
-- initial_fit_score_1_to_5
+- source_url
+- fit_score (1-5)
 - recommended_next_action
 
-要求：
-
-- 不要追求数量，优先质量
-- 每条必须说明为什么「现在」值得关注
-- 如果信息不足，请标记 uncertainty
+Rules:
+- No generic companies unless real signal exists
+- No hallucination
+- Every entry must have a source
